@@ -1,0 +1,21 @@
+{
+	"name": "Basic-Starter",
+	"description": "This is just a base for starting new sites using Grunt and Node.",
+	"version": "0.1.0",
+	"keywords": ["Basic Starter"],
+	"author": "Wylie",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/wylie/Basic-Starter.git"
+	},
+	"devDependencies": {
+		"grunt": "~0.4.1",
+		"grunt-contrib-jshint": "~0.6.0",
+		"grunt-contrib-nodeunit": "~0.2.0",
+		"grunt-contrib-uglify": "~0.2.2",
+		"grunt-contrib-less": "~0.6.1",
+		"grunt-express": "~0.3.6",
+		"express": "~3.3.1",
+		"grunt-targethtml": "~0.2.4"
+    }
+}
