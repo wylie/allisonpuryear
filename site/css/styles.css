@@ -96,24 +96,25 @@ html[xmlns] .clearfix {
 	text-align: center;
 	border-bottom: 1px solid #E0E0E0;
 }
-#nav {
+.nav {
 	list-style-type: none;
 	font-family: Helvetica, Arial, sans-serif;
 	padding: 15px 0;
 	font-size: 16px;
 }
-#nav li {
-	display: inline-block;
+.nav .nav-item {
+	display: in.nav-itemne-block;
 	padding: 0 10px 0 0;
 	margin: 0 10px 0 0;
 	float: left;
 }
-#nav li:last-child {
+.nav .nav-item:last-child {
 	border-right: none;
 	padding-right: 0;
 	margin-right: 0;
 }
-#nav a {
+.nav .nav-item-link {
+	cursor: pointer;
 	text-decoration: none;
 }
 
