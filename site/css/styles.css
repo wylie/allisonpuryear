@@ -92,10 +92,14 @@ html[xmlns] .clearfix {
 }
 
 
+/*heading*/
 #header {
 	text-align: center;
 	border-bottom: 1px solid #E0E0E0;
 }
+
+
+/*navigation*/
 .nav {
 	list-style-type: none;
 	font-family: Helvetica, Arial, sans-serif;
@@ -118,6 +122,30 @@ html[xmlns] .clearfix {
 	text-decoration: none;
 }
 
+
+/*page wrapper*/
+.pg-wrapper {
+	text-align: center;
+}
+.pg-wrapper h1,
+.pg-wrapper h2,
+.pg-wrapper p,
+.pg-wrapper ol {
+	text-align: left;
+}
+h1 {
+	padding: .5em 0 1.25em;
+}
+h2 {
+	padding: .5em 0 1em;
+	font-weight: bold;
+}
+p {
+	padding-bottom: 1em;
+}
+
+
+/*footer*/
 #footer {
 	padding: 15px 0;
 	text-align: center;
