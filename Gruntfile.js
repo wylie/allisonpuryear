@@ -20,6 +20,4 @@ module.exports = function(grunt) {
 		"express",
 		"express-keepalive"
 	]);
-
-	
 };
