@@ -4,6 +4,6 @@ $(function() {
 	// on click load the other pages
 	$(document).on('click', '.nav-item-link', function() {
 		var pgName = $(this).data('name');
-		$('.pg-wrapper').load('pages.html #' + pgName);
+			$('.pg-wrapper').load('pages.html #' + pgName);
 	});
 });

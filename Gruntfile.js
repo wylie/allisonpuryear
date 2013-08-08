@@ -3,13 +3,6 @@ module.exports = function(grunt) {
 	// project config
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-
-		// less: {
-		// 	compile: {
-		// 		src: "less/basic-starter.less",
-		// 		dest: "css/basic-starter.css"
-		// 	}
-		// },
 		
 		express: {
 			server: {
@@ -21,7 +14,6 @@ module.exports = function(grunt) {
 		}
 	});
 
-	// grunt.loadNpmTasks("grunt-contrib-less");
 	grunt.loadNpmTasks('grunt-express');
 
 	grunt.registerTask("compile", [
