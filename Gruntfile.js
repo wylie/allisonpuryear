@@ -4,6 +4,21 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		
+		less: {
+			development: {
+				files: {
+					"site/css/styles.css": "site/css/styles.less"
+				}
+			}
+		},
+
+		watch: {
+			css: {
+				files: ['site/css/styles.less'],
+				tasks: ['less']
+			}
+		},
+
 		express: {
 			server: {
 				options: {
@@ -14,9 +29,15 @@ module.exports = function(grunt) {
 		}
 	});
 
+	grunt.loadNpmTasks('grunt-contrib-less');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-express');
 
 	grunt.registerTask("compile", [
+		"less",
+		"watch"
+	]);
+	grunt.registerTask("server", [
 		"express",
 		"express-keepalive"
 	]);

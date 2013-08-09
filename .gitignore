@@ -1,2 +1,5 @@
 # DIRECTORIES *
 node_modules/
+
+# PAGES *
+site/css/styles.less
