@@ -34,11 +34,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-express');
 
 	grunt.registerTask("compile", [
-		"less",
-		"watch"
+		"less"
 	]);
 	grunt.registerTask("server", [
 		"express",
+		"watch",
 		"express-keepalive"
 	]);
 };
