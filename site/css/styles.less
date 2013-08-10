@@ -69,6 +69,10 @@ a {
 
 h1 {
 	font-size: 30px;
+	width: 80%;
+	text-align: center;
+	margin: auto;
+	line-height: 1.25em;
 }
 .active {
 	> * {
@@ -162,7 +166,7 @@ html[xmlns] .clearfix {
 /*page wrapper*/
 .pg-wrapper {
 	text-align: center;
-	h1,
+	//h1,
 	h2,
 	p,
 	ol {
@@ -171,6 +175,11 @@ html[xmlns] .clearfix {
 }
 h1 {
 	padding: .5em 0 1.25em;
+	font-weight: bold;
+	width: 80%;
+	text-align: center;
+	margin: auto;
+	line-height: 1.25em;		
 }
 h2 {
 	padding: .5em 0 .5em;
@@ -213,6 +222,24 @@ p {
 	}
 }
 
+
+#welcome {
+	.img.main {
+		-webkit-box-reflect:
+			below 1px 
+			-webkit-gradient(linear, left top, left bottom, 
+			from(transparent), color-stop(0.68, transparent), to(white));
+		margin-bottom: 25px;
+		position: relative;
+		z-index: 0;
+	}
+	h1, p {
+		position: relative;
+		z-index: 10;
+	}
+	h1 {
+	}
+}
 
 #about-eating-disorders {
 	h2 {
