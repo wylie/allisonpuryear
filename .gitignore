@@ -1,5 +1,2 @@
-# DIRECTORIES *
 node_modules/
-
-# PAGES *
-site/css/styles.css
+.DS_Store
