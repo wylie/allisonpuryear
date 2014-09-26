@@ -175,29 +175,29 @@ html[xmlns] .clearfix {
 /*heading*/
 #header {
   text-align: center;
-  border-bottom: 1px solid #E0E0E0;
+  border-bottom: 1px solid #e0e0e0;
   margin-bottom: 15px;
   position: relative;
 }
 #header .img {
   position: absolute;
-  left: -100px;
+  left: -110px;
   z-index: 0;
   top: 5px;
   height: 104px;
   width: 96px;
 }
-#header ul {
-  z-index: 9999;
-  position: relative;
+.interior #header .img {
+  display: inline-block;
 }
 .welcome #header .img {
   display: none;
 }
-.interior #header .img {
-  display: inline-block;
+#header ul {
+  z-index: 9999;
+  position: relative;
 }
-/*navigation*/
+/* NAVIGATION */
 .nav {
   list-style-type: none;
   font-family: Helvetica, Arial, sans-serif;
@@ -208,6 +208,7 @@ html[xmlns] .clearfix {
 .nav .nav-item {
   display: inline-block;
   float: left;
+  font-size: 13px;
 }
 .nav .nav-item:last-child {
   border-right: none;
@@ -215,20 +216,20 @@ html[xmlns] .clearfix {
   margin-right: 0;
 }
 .nav .nav-item.active .nav-item-link {
-  background-color: #EEE;
+  background-color: #eee;
   font-weight: normal;
 }
 .nav .nav-item-link {
-  padding: 5px 10px;
-  margin: 0 5px 0 5px;
+  padding: 5px 5px;
+  margin: 0 5px 0 0;
   cursor: pointer;
   text-decoration: none;
   border-radius: 3px;
 }
 .nav .nav-item-link:hover {
-  background-color: #DDD;
+  background-color: #ddd;
 }
-/*page wrapper*/
+/* PAGE WRAPPERS */
 .pg-wrapper {
   text-align: center;
 }
@@ -255,36 +256,36 @@ p {
 }
 .callout {
   padding-top: 15px;
-  border-top: 1px solid #E0E0E0;
-  border-bottom: 1px solid #E0E0E0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
 }
-/*footer*/
-#footer {
+/* FOOTER */
+.footer {
   padding: 15px 0;
   text-align: center;
 }
-#footer ul {
+.footer ul {
   list-style-type: none;
   font-family: Helvetica, Arial, sans-serif;
 }
-#footer ul li {
+.footer ul li {
   display: inline-block;
   font-size: 16px;
-  border-right: 1px solid #E0E0E0;
+  border-right: 1px solid #e0e0e0;
   padding: 0 10px 0 0;
   margin: 0 10px 0 0;
   float: left;
 }
-#footer ul li:last-child {
+.footer ul li:last-child {
   border-right: none;
   padding-right: 0;
   margin-right: 0;
 }
-#welcome .img.logo {
+.welcome .img.logo {
   width: 600px;
   height: 200px;
 }
-#welcome .img.main {
+.welcome .img .main {
   -webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.68, transparent), to(#ffffff));
   margin-bottom: 25px;
   position: relative;
@@ -292,50 +293,50 @@ p {
   width: 541px;
   height: 262px;
 }
-#welcome h1,
-#welcome p {
+.welcome h1,
+.welcome p {
   position: relative;
   z-index: 10;
 }
-#about-eating-disorders .img {
+.disorders .img {
   width: 467px;
   height: 350px;
 }
-#about-eating-disorders h2 + p {
+.disorders .img h2 + p {
   margin-left: 15px;
 }
-#about-therapy .img {
+.therapy .img {
   width: 300px;
   height: 225px;
 }
-#about-me .img {
+.me .img {
   float: left;
   margin: 0 15px 15px 0;
   width: 208px;
   height: 300px;
 }
-#appointment-info .side {
+.appointment .side {
   display: block;
 }
-#appointment-info .side .img {
+.appointment .side .side .img {
   float: left;
   padding: 0 50px 0 125px;
   width: 197px;
   height: 300px;
 }
-#appointment-info .side .contact-info {
+.appointment .side .side .contact-info {
   text-align: center;
   padding-top: 35px;
 }
-#appointment-info .side .contact-info li {
+.appointment .side .side .contact-info li {
   margin-bottom: 20px;
   font-size: 1.25em;
 }
-#appointment-info ol {
+.appointment .side ol {
   list-style-type: decimal;
   padding-bottom: 1em;
   margin-left: 50px;
 }
-#appointment-info ol li {
+.appointment .side ol li {
   margin-bottom: 10px;
 }

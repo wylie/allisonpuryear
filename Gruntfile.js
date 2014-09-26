@@ -7,14 +7,14 @@ module.exports = function(grunt) {
 		less: {
 			development: {
 				files: {
-					"site/css/styles.css": "site/css/styles.less"
+					"app/css/styles.css": "app/css/styles.less"
 				}
 			}
 		},
 
 		watch: {
 			css: {
-				files: ['site/css/styles.less'],
+				files: ['app/css/*.less'],
 				tasks: ['less']
 			}
 		},
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 			server: {
 				options: {
 					port: 9000,
-					bases: "site"
+					bases: "app"
 				}
 			}
 		}
@@ -36,9 +36,12 @@ module.exports = function(grunt) {
 	grunt.registerTask("compile", [
 		"less"
 	]);
+
 	grunt.registerTask("server", [
 		"express",
 		"watch",
+		"less",
 		"express-keepalive"
 	]);
+
 };

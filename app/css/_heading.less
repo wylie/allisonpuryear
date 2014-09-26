@@ -1,0 +1,31 @@
+/*heading*/
+#header {
+	text-align: center;
+	border-bottom: 1px solid #e0e0e0;
+	margin-bottom: 15px;
+	position: relative;
+
+	.img {
+		position: absolute;
+		left: -110px;
+		z-index: 0;
+		top: 5px;
+		height: 104px;
+		width: 96px;
+
+		.interior & {
+			display: inline-block;
+		}
+
+		.welcome & {
+			display: none;
+		}
+	}
+
+	ul {
+		z-index: 9999;
+		position: relative;
+	}
+
+
+}
