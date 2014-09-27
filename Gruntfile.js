@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 		less: {
 			development: {
 				files: {
-					"app/css/styles.css": "app/css/styles.less"
+					'app/css/styles.css': 'app/css/styles.less'
 				}
 			}
 		},
@@ -18,12 +18,18 @@ module.exports = function(grunt) {
 				tasks: ['less']
 			}
 		},
+		
+		sitemap: {
+			dist: {
+				siteRoot: 'app/'
+			}
+		},
 
 		express: {
 			server: {
 				options: {
 					port: 9000,
-					bases: "app"
+					bases: 'app'
 				}
 			}
 		}
@@ -32,16 +38,18 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-express');
+	grunt.loadNpmTasks('grunt-sitemap');
 
-	grunt.registerTask("compile", [
-		"less"
+	grunt.registerTask('compile', [
+		'less',
+		'sitemap'
 	]);
 
-	grunt.registerTask("server", [
-		"express",
-		"watch",
-		"less",
-		"express-keepalive"
+	grunt.registerTask('server', [
+		'express',
+		'watch',
+		'less',
+		'express-keepalive'
 	]);
 
 };
