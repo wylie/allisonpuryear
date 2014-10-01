@@ -1,3 +1,3 @@
 # allisonpuryear.com
 
-The professional website for Allison Puryear.
+The redesign of the professional website for Allison Puryear.
