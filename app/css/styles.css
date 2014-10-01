@@ -127,13 +127,14 @@ table {
   border-spacing: 0;
 }
 html {
-  font-family: 'Didot', 'Times New Roman', serif;
+  font-family: Helvetica, Arial, sans-serif;
   color: #333;
   font-size: 18px;
 }
 body {
-  width: 700px;
+  min-width: 300px;
   margin: 0 auto;
+  text-align: center;
 }
 a {
   color: #777;
@@ -148,12 +149,31 @@ h1 {
   margin: auto;
   line-height: 1.25em;
 }
+h1 {
+  padding: .5em 0 1.25em;
+  font-weight: bold;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+strong {
+  font-weight: bold;
+  line-height: 1.25em;
+}
+h2 {
+  padding: .5em 0 .5em;
+  font-weight: bold;
+  font-style: italic;
+}
+p {
+  padding-bottom: 1em;
+}
 .active > * {
   font-weight: bold;
   color: #444;
 }
-strong {
-  font-weight: bold;
+.clearfix {
+  display: inline-block;
 }
 .clearfix:after {
   content: ".";
@@ -163,52 +183,33 @@ strong {
   line-height: 0;
   height: 0;
 }
-.clearfix {
-  display: inline-block;
-}
-html[xmlns] .clearfix {
-  display: block;
-}
-* html .clearfix {
-  height: 1%;
-}
-/*heading*/
-#header {
+/* PAGE WRAPPERS */
+.pg-wrapper {
   text-align: center;
-  border-bottom: 1px solid #e0e0e0;
-  margin-bottom: 15px;
-  position: relative;
+  width: 900px;
+  margin: 0 auto 100px;
 }
-#header .img {
-  position: absolute;
-  left: -110px;
-  z-index: 0;
-  top: 5px;
-  height: 104px;
-  width: 96px;
+@media screen and (max-width: 599px) {
+  .pg-wrapper {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
 }
-.interior #header .img {
-  display: inline-block;
-}
-.welcome #header .img {
-  display: none;
-}
-#header ul {
-  z-index: 9999;
-  position: relative;
+.pg-wrapper h2,
+.pg-wrapper p,
+.pg-wrapper ol {
+  text-align: left;
 }
 /* NAVIGATION */
 .nav {
   list-style-type: none;
-  font-family: Helvetica, Arial, sans-serif;
-  padding: 15px 0;
   font-size: 16px;
   margin-bottom: -3px;
+  background-color: #ccc;
 }
 .nav .nav-item {
   display: inline-block;
-  float: left;
-  font-size: 13px;
 }
 .nav .nav-item:last-child {
   border-right: none;
@@ -220,70 +221,58 @@ html[xmlns] .clearfix {
   font-weight: normal;
 }
 .nav .nav-item-link {
-  padding: 5px 5px;
-  margin: 0 5px 0 0;
+  padding: 10px;
+  margin: 0 0 0 -3px;
   cursor: pointer;
   text-decoration: none;
-  border-radius: 3px;
+  display: inline-block;
+}
+.nav .nav-item-link:after {
+  display: table;
+  clear: both;
+  content: '';
 }
 .nav .nav-item-link:hover {
   background-color: #ddd;
 }
-/* PAGE WRAPPERS */
-.pg-wrapper {
+/*heading*/
+nav {
   text-align: center;
+  margin: 15px 0;
+  position: relative;
 }
-.pg-wrapper h2,
-.pg-wrapper p,
-.pg-wrapper ol {
-  text-align: left;
+nav .img {
+  position: absolute;
+  left: -110px;
+  z-index: 0;
+  top: 5px;
+  height: 104px;
+  width: 96px;
 }
-h1 {
-  padding: .5em 0 1.25em;
-  font-weight: bold;
-  width: 80%;
-  text-align: center;
-  margin: auto;
-  line-height: 1.25em;
-}
-h2 {
-  padding: .5em 0 .5em;
-  font-weight: bold;
-  font-style: italic;
-}
-p {
-  padding-bottom: 1em;
-}
-.callout {
-  padding-top: 15px;
-  border-top: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0;
-}
-/* FOOTER */
-.footer {
-  padding: 15px 0;
-  text-align: center;
-}
-.footer ul {
-  list-style-type: none;
-  font-family: Helvetica, Arial, sans-serif;
-}
-.footer ul li {
+.welcome nav .img {
   display: inline-block;
-  font-size: 16px;
-  border-right: 1px solid #e0e0e0;
-  padding: 0 10px 0 0;
-  margin: 0 10px 0 0;
-  float: left;
 }
-.footer ul li:last-child {
-  border-right: none;
-  padding-right: 0;
-  margin-right: 0;
+nav ul {
+  z-index: 9999;
+  position: relative;
+}
+/* CONTTENT */
+@media screen and (max-width: 599px) {
+  .welcome {
+    width: 100%;
+    float: none;
+  }
 }
 .welcome .img.logo {
-  width: 600px;
-  height: 200px;
+  width: 584px;
+  height: 121px;
+  margin: 15px auto 0;
+}
+@media screen and (max-width: 599px) {
+  .welcome .img.logo {
+    width: 100%;
+    height: auto;
+  }
 }
 .welcome .img .main {
   -webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.68, transparent), to(#ffffff));
@@ -298,22 +287,68 @@ p {
   position: relative;
   z-index: 10;
 }
+.disorders {
+  width: 70%;
+  float: left;
+}
+@media screen and (max-width: 599px) {
+  .disorders {
+    width: 100%;
+    float: none;
+  }
+}
 .disorders .img {
-  width: 467px;
-  height: 350px;
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 599px) {
+  .disorders .img {
+    width: 100%;
+    height: auto;
+  }
 }
 .disorders .img h2 + p {
   margin-left: 15px;
 }
-.therapy .img {
-  width: 300px;
-  height: 225px;
+.me {
+  width: 70%;
+  float: left;
+}
+@media screen and (max-width: 599px) {
+  .me {
+    width: 100%;
+    float: none;
+  }
 }
 .me .img {
   float: left;
   margin: 0 15px 15px 0;
   width: 208px;
   height: 300px;
+}
+.therapy {
+  width: 70%;
+  float: left;
+}
+@media screen and (max-width: 599px) {
+  .therapy {
+    width: 100%;
+    float: none;
+  }
+}
+.therapy .img {
+  width: 100%;
+  height: auto;
+}
+.appointment {
+  width: 70%;
+  float: left;
+}
+@media screen and (max-width: 599px) {
+  .appointment {
+    width: 100%;
+    float: none;
+  }
 }
 .appointment .side {
   display: block;
@@ -339,4 +374,69 @@ p {
 }
 .appointment .side ol li {
   margin-bottom: 10px;
+}
+.main-pg,
+.supervision {
+  width: 70%;
+  float: left;
+}
+.main-pg .img,
+.supervision .img {
+  wwidth: 100%;
+}
+@media screen and (max-width: 599px) {
+  .main-pg,
+  .supervision {
+    width: 100%;
+    float: none;
+  }
+}
+@media screen and (max-width: 599px) {
+  p {
+    line-height: 20px;
+    font-size: 14px;
+  }
+}
+/* FOOTER */
+.footer {
+  padding: 25px 0 15px;
+  position: fixed;
+  bottom: 0;
+  background-color: #f0f0f0;
+  width: 100%;
+  text-align: center;
+  z-index: 999;
+}
+.footer ul {
+  list-style-type: none;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.footer ul li {
+  display: inline-block;
+  font-size: 16px;
+  border-right: 1px solid #e0e0e0;
+  padding: 0 10px 0 0;
+  margin: 0 10px 0 0;
+  float: left;
+}
+.footer ul li:last-child {
+  border-right: none;
+  padding-right: 0;
+  margin-right: 0;
+}
+@media screen and (max-width: 599px) {
+  .footer {
+    width: 100%;
+    padding: 10px 10px 4px 10px;
+  }
+  .footer ul {
+    padding-left: 50%;
+    margin-left: -35%;
+  }
+  .footer ul li {
+    border: none;
+    font-size: 12px;
+    padding: 0 5px 0 0;
+    margin: 0 5px 0 0;
+  }
 }

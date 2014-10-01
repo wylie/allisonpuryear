@@ -1,0 +1,67 @@
+html {
+	font-family: Helvetica, Arial, sans-serif;
+	color: #333;
+	font-size: 18px;
+}
+
+body {
+	min-width: 300px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+a {
+	color: #777;
+
+	&:hover {
+		color: #444;
+	}
+}
+
+h1 {
+	font-size: 30px;
+	width: 80%;
+	text-align: center;
+	margin: auto;
+	line-height: 1.25em;
+}
+h1 {
+	padding: .5em 0 1.25em;
+	font-weight: bold;
+	width: 80%;
+	text-align: center;
+	margin: auto;
+}
+
+strong {
+	font-weight: bold;
+	line-height: 1.25em;
+}
+
+h2 {
+	padding: .5em 0 .5em;
+	font-weight: bold;
+	font-style: italic;
+}
+
+p {
+	padding-bottom: 1em;
+}
+
+.active > * {
+	font-weight: bold;
+	color: #444;
+}
+
+.clearfix {
+	display: inline-block;
+
+	&:after {
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height: 0;
+	}
+}
