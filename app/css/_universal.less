@@ -1,13 +1,21 @@
-html {
+html,
+body {
 	font-family: Helvetica, Arial, sans-serif;
 	color: #333;
 	font-size: 18px;
+	line-height: 22px;
+}
+
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
 }
 
 body {
 	min-width: 300px;
 	margin: 0 auto;
-	text-align: center;
 }
 
 a {
@@ -20,22 +28,18 @@ a {
 
 h1 {
 	font-size: 30px;
-	width: 80%;
-	text-align: center;
-	margin: auto;
 	line-height: 1.25em;
+// 	font-weight: bold;
 }
-h1 {
-	padding: .5em 0 1.25em;
-	font-weight: bold;
-	width: 80%;
-	text-align: center;
-	margin: auto;
-}
+// h1 {
+// 	padding: .5em 0 1.25em;
+// 	width: 80%;
+// 	text-align: center;
+// 	margin: auto;
+// }
 
 strong {
 	font-weight: bold;
-	line-height: 1.25em;
 }
 
 h2 {
@@ -45,23 +49,31 @@ h2 {
 }
 
 p {
-	padding-bottom: 1em;
-}
+	padding-top: 20px;
 
-.active > * {
-	font-weight: bold;
-	color: #444;
-}
-
-.clearfix {
-	display: inline-block;
-
-	&:after {
-		content: ".";
-		display: block;
-		clear: both;
-		visibility: hidden;
-		line-height: 0;
-		height: 0;
+	&:nth-child(1) {
+		padding-top: 0;
 	}
 }
+
+em {
+	font-style: italic;
+}
+
+// .active > * {
+// 	font-weight: bold;
+// 	color: #444;
+// }
+
+// .clearfix {
+// 	display: inline-block;
+
+// 	&:after {
+// 		content: ".";
+// 		display: block;
+// 		clear: both;
+// 		visibility: hidden;
+// 		line-height: 0;
+// 		height: 0;
+// 	}
+// }

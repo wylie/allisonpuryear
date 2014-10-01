@@ -1,17 +1,27 @@
-.callout {
-	width: 30%;
-	float: left;
+// .callout {
+// 	width: 30%;
+// 	float: left;
 
-	p {
-		text-align: center;
-	}
+// 	p {
+// 		text-align: center;
+// 	}
 	
-	@media screen and (max-width: 599px) {
-		box-sizing: border-box;
-		width: 100%;
-		float: none;
-		padding-top: 15px;
-		border-top: 1px solid #e0e0e0;
-		border-bottom: 1px solid #e0e0e0;
+// 	@media screen and (max-width: 599px) {
+// 		box-sizing: border-box;
+// 		width: 100%;
+// 		float: none;
+// 		padding-top: 15px;
+// 		border-top: 1px solid #e0e0e0;
+// 		border-bottom: 1px solid #e0e0e0;
+// 	}
+// }
+
+.callout {
+	.module {
+		margin-top:  50px;
+
+		&:nth-child(1) {
+			margin-top:  0;
+		}
 	}
 }
