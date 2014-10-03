@@ -2,11 +2,15 @@
 .nav {
 	list-style-type: none;
 	font-size: 16px;
-	margin-bottom: -3px;
+	margin: 0 -10px -3px;
 	background-color: #ccc;
 
 	.nav-item {
 		display: inline-block;
+
+		&:first-child {
+			display: none;
+		}
 
 		&:last-child {
 			border-right: none;
@@ -26,6 +30,9 @@
 		cursor: pointer;
 		text-decoration: none;
 		display: inline-block;
+
+		&:checked {
+		}
 
 		&:after {
 			display: table;
@@ -65,4 +72,18 @@ nav {
 	}
 
 
+}
+
+.nav {
+	@media screen and (max-width: 800px) {
+		overflow: auto;
+
+		.nav-item {
+			display: none;
+
+			&:first-child {
+				display: block;
+			}
+		}
+	}
 }

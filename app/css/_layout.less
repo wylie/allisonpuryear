@@ -1,3 +1,7 @@
+.col {
+	padding: 0 10px;
+}
+
 .lay {
 	display: table;
 	margin: auto;
@@ -24,6 +28,12 @@
 
 			&:nth-child(2) {
 				width: 30%;
+			}
+
+			@media screen and (max-width: 800px) {
+				width: 100% !important;
+				display: table;
+				padding: 0 10px !important;
 			}
 		}
 	}
