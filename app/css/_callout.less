@@ -38,6 +38,12 @@ button {
     background-color: #fff;
     cursor: pointer;
 }
+
+#userName {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
 .btn-group {
 	white-space: nowrap;
 	&:after {
@@ -57,4 +63,24 @@ button {
 .btn-group input[type="text"] + button {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+}
+
+
+@media screen and (max-width: 800px) {
+	.btn-group {
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+		display: inline;
+		float: none;
+		margin-right: -67px;
+	}
+
+	#userEmail {
+		width: 100%;
+	}
+
+	#submit {
+		float: none;
+		margin-left: -2px;
+	}
 }

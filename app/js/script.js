@@ -1,4 +1,4 @@
-$(function() {
+// $(function() {
 	
 	// var func = function(pg) {
 	// 	// get the element where we put the stuff
@@ -32,4 +32,30 @@ $(function() {
 	// });
 	
 	
-});
+// });
+
+
+window.onload = init;
+
+function init() {
+	var submitBtn = document.getElementById('submit');	
+	submitBtn.onclick = sendEmail;
+}
+
+function sendEmail() {
+	var theForm = document.forms.myForm;
+	var name = theForm.elements.userName.value;
+	var email = theForm.elements.userEmail.value;
+
+	var emailVal = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	if( emailVal.test(email) ) {
+		var request = new XMLHttpRequest();
+		request.open('GET', 'sendEmail.php?name=' + name + '&email=' + email);
+		request.setRequestHeader("Content-Type","text/plain;charset=UTF-8");
+		request.send();
+	} else {
+		alert('Please enter a valid email address');
+	}
+	
+	return false;
+}
