@@ -132,6 +132,7 @@ body {
   color: #333;
   font-size: 18px;
   line-height: 22px;
+  min-width: 835px;
 }
 html {
   box-sizing: border-box;
@@ -181,21 +182,6 @@ em {
   width: 208px;
   height: 300px;
 }
-@media screen and (max-width: 800px) {
-  .content .img {
-    width: 100%;
-    height: auto;
-  }
-}
-@media screen and (max-width: 800px) {
-  .contact-info li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  .contact-info li:last-child {
-    margin-right: 0;
-  }
-}
 .col {
   padding: 0 10px;
 }
@@ -221,13 +207,6 @@ em {
 }
 .lay7 .col:nth-child(2) {
   width: 30%;
-}
-@media screen and (max-width: 800px) {
-  .lay7 .col {
-    width: 100% !important;
-    display: table;
-    padding: 0 10px !important;
-  }
 }
 .content {
   max-width: 900px;
@@ -299,17 +278,6 @@ nav ul {
   z-index: 9999;
   position: relative;
 }
-@media screen and (max-width: 800px) {
-  .nav {
-    overflow: auto;
-  }
-  .nav .nav-item {
-    display: none;
-  }
-  .nav .nav-item:first-child {
-    display: block;
-  }
-}
 .callout .module {
   padding-top: 25px;
   margin-top: 25px;
@@ -317,15 +285,8 @@ nav ul {
 }
 .callout .module:nth-child(1) {
   padding-top: 0;
-  margin-top: 0;
   border-top: none;
-}
-@media screen and (max-width: 800px) {
-  .callout .module {
-    padding-top: 25px;
-    margin-top: 25px;
-    border-top: 1px solid #efefef;
-  }
+  text-align: center;
 }
 input[type="text"] {
   border-radius: 3px;
@@ -340,7 +301,7 @@ button {
   border: 1px solid #ccc;
   font-size: 16px;
   padding: 5px;
-  margin: 0;
+  margin: 0 0 0 -5px;
   color: #999;
   background-color: #fff;
   cursor: pointer;
@@ -360,30 +321,14 @@ button {
 .btn-group input[type="text"] {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  float: left;
   border-right: none;
   box-shadow: none;
   -webkit-appearance: none;
+  padding-right: 8px;
 }
 .btn-group input[type="text"] + button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-}
-@media screen and (max-width: 800px) {
-  .btn-group {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    display: inline;
-    float: none;
-    margin-right: -67px;
-  }
-  #userEmail {
-    width: 100%;
-  }
-  #submit {
-    float: none;
-    margin-left: -2px;
-  }
 }
 .me .img {
   float: left;
@@ -409,9 +354,4 @@ button {
 }
 .footer .list-item:nth-child(1) {
   margin-left: 0;
-}
-@media screen and (max-width: 800px) {
-  .footer {
-    display: none;
-  }
 }

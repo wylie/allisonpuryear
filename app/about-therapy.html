@@ -19,7 +19,7 @@
 	<header class="lay1">
 
 		<div class="col">
-			<img class="img logo" src="img/logo-trim-lg-new.png" alt="logo" />
+			<a href="/"><img class="img logo" src="img/logo-trim-lg-new.png" alt="logo" /></a>
 		</div>
 
 		<nav class="col">
@@ -47,7 +47,8 @@
 
 		<div class="col callout">
 			<div class="module">
-				<p class="txt">To schedule an appointment, click on the "Schedule Now" tab to the right.</p>
+				<!-- <p class="txt">To schedule an appointment, click on the "Schedule Now" tab to the right.</p> -->
+				<a href="https://www.schedulicity.com/scheduling/APLRP7" title="Online scheduling" target="_blank"><img src="//d2k394ztg01v3m.cloudfront.net/images/schedulenow_00_lg.v1.png" alt="Schedule online now" border="0" /></a>
 			</div>
 
 			<div class="module">
@@ -56,12 +57,17 @@
 
 			<div class="module">
 				<p class="txt">Sign up here to get <em>"10 Steps to Loving Your Body"</em></p>
-				<input type="text" />
+				<form id="myForm">
+					<input id="userName" type="text" placeholder="Your Name Here" />
+					<div class="btn-group">
+						<input id="userEmail" type="text" placeholder="Enter Your Email" />
+						<button type="button" id="submit">Submit</button>
+					</div>
+				</form>
 			</div>
 
 			<div class="module">
 				<ul class="contact-info">
-					<li><strong>Contact Information</strong></li>
 					<li>(828) 333-3654</li>
 					<li>96 Central Ave. Suite 7</li>
 					<li>Asheville, NC 28801</li>
@@ -73,7 +79,7 @@
 
 	<footer class="footer">
 		<ul class="list">
-			<li class="list-item">828.333.3654</li>
+			<li class="list-item">(828) 333-3654</li>
 			<li class="list-item"><a href="mailto:allisonpuryear@icloud.com">allisonpuryear@icloud.com</a></li>
 			<li class="list-item">96 Central Ave. Suite 7 Asheville, NC 28801</li>
 		</ul>
